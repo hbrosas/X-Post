@@ -1,0 +1,23 @@
+{
+  "name": "x-post",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hbrosas/X-Post.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hbrosas/X-Post/issues"
+  },
+  "homepage": "https://github.com/hbrosas/X-Post#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "express": "^4.16.1"
+  }
+}

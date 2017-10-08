@@ -1,0 +1,142 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+
+.the-body {
+    color: #f2f2f2;
+    /*background: url('../images/home-bg.jpg') no-repeat center center;*/
+    background-size: cover;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.home-cont {
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.header {
+    font-family: 'Slabo 27px', serif;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+hr {
+    width:100%;
+}
+
+.top-hr {
+    margin-top: 50px;
+}
+
+.login_title{
+    font-family: "Helvetica Neue",sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 100;
+    color: #424242;
+    letter-spacing: 3px;
+}
+
+.card-container.card {
+    width: 350px;
+
+}
+
+.card {
+    background-color: #fefefe;
+    /* just in case there no content*/
+    padding: 1px 25px 25px;
+    /* shadows and rounded borders */
+    border: 3px solid #f5f5f5;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+#inputUsername,
+#inputPassword,
+#inputFirstName, #inputLastName,
+#inputEmail, #inputConfirmPassword, #inputBirthday, #inputGender{
+    direction: ltr;
+    height: 30px;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    padding-left: 10px;
+    width: 100%;
+    display: block;
+    color: #424242;
+}
+
+.form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.input_title{
+    color: #424242;
+    font-family: 'Lato', sans-serif;
+    padding-left:3px;
+    margin-bottom: 2px;
+}
+
+.iagree, .forgot {
+    color: #424242;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+}
+
+.forgot {
+    color: #5cb85c;
+}
+
+.forgot:hover {
+    text-decoration: none;
+    color: #424242;
+}
+
+.submitbtn {
+    letter-spacing: 2px;
+}
+
+.mainbtn {
+    /*width: 150px;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.backbtn:hover {
+    cursor: pointer;
+}
+
+.error {
+    font-family: 'Lato', sans-serif;
+    color: #ef5350;
+}
