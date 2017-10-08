@@ -1,0 +1,9 @@
+html {
+    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.main-container {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+	<title>Get Started | Green and White 2018</title>
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/registeraccount.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="the-body">
+	<div class="main-container">
+
+		<div id="home-cont" class="home-cont">
+			<div id="login-cont">
+				<div class="card card-container">
+					<h2 class='login_title text-center'>
+						<span class="pull-left">GET STARTED</span>
+					</h2>
+					<hr class="top-hr">
+					<div class="alert alert-info" id="info" role="alert">Your account is still temporary. Just wait for the administrator to confirm your account. But please fill-up the following details to help him know you.</div>
+					<div class="alert alert-danger" id="error" role="alert">Please fill-up all the details</div>
+					<form class="form-signin">
+						<div class="row">
+							<div class="col-md-6">
+								<p class="input_title">Username</p>
+								<input type="text" id="inputUser" class="login_box" onkeyup="validatespecial(this)" required autofocus>
+							</div>
+							<div class="col-md-6">
+								<p class="input_title">Temporary Password</p>
+								<input type="text" id="inputPassword" class="login_box" placeholder="******">
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-4">
+								<p class="input_title">First Name</p>
+								<input type="text" id="inputFirstName" class="login_box" onkeyup = "Validate(this)" required >
+							</div>
+							<div class="col-md-4">
+								<p class="input_title">Middle Name</p>
+								<input type="text" id="inputMiddleName" class="login_box" onkeyup = "Validate(this)"  required>
+							</div>
+							<div class="col-md-4">
+								<p class="input_title">Last Name</p>
+								<input type="text" id="inputLastName" class="login_box" onkeyup = "Validate(this)" required>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-4">
+								<p class="input_title">ID Number</p>
+								<input type="text" id="inputIDnumber" class="login_box" onkeyup="validatephone(this);" required>
+							</div>
+							<div class="col-md-8">
+								<p class="input_title">Birthday</p>
+								<div class="col-md-4">
+									<select type="text" class="login_box" id="inputBirthdate" required>
+										<option selected disabled="true">Day</option>
+										<option value="1">1</option> <option value="2">2</option>
+										<option value="3">3</option> <option value="4">4</option> 
+										<option value="5">5</option> <option value="6">6</option>
+										<option value="7">7</option> <option value="8">8</option> 
+										<option value="9">9</option> <option value="10">10</option> 
+										<option value="10">10</option> <option value="11">11</option>
+										<option value="12">12</option> <option value="12">12</option>
+										<option value="13">13</option> <option value="14">14</option>
+										<option value="15">15</option> <option value="16">16</option>
+										<option value="17">17</option> <option value="18">18</option>
+										<option value="19">19</option> <option value="20">20</option>
+										<option value="21">21</option> <option value="22">22</option>
+										<option value="23">23</option> <option value="24">24</option>
+										<option value="25">25</option> <option value="26">26</option>
+										<option value="27">27</option> <option value="28">28</option>
+										<option value="29">29</option> <option value="30">30</option>
+										<option value="31">31</option>
+									</select>
+								</div>
+								<div class="col-md-4">
+									<select type="text" class="login_box" id="inputBirthMonth" required>
+										<option selected disabled="true">Month</option>
+										<option value="1">January</option>
+										<option value="2">February</option>
+										<option value="3">March</option>
+										<option value="4">April</option>
+										<option value="5">May</option>
+										<option value="6">June</option>
+										<option value="7">July</option>
+										<option value="8">August</option>
+										<option value="9">September</option>
+										<option value="10">October</option>
+										<option value="11">November</option>
+										<option value="12">December</option>
+									</select>
+								</div>
+								<div class="col-md-4">
+									<input type="text" id="inputBirthyear" class="login_box" placeholder="Year" required>
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-6">
+								<p class="input_title">Security Question</p>
+								<select type="text" id="inputSQ" class="login_box" onkeyup = "Validate(this)" required>
+									<option selected disabled="true">Choose a security question</option>
+									<option value="animal"> What is favorite animal? </option>
+									<option value="food"> What is your favorite food? </option>
+								</select>
+							</div>
+							<div class="col-md-6">
+								<p class="input_title">Security Answer</p>
+								<input type="text" id="inputSQAnswer" class="login_box" onkeyup = "Validate(this)" placeholder="Answer" required>
+							</div>
+						</div>
+						<br>								
+						<div class="inline-form">
+						<a href="reserve.html"><button class="btn btn-small btn-success btn-block submitbtn" type="button">LET'S GET STARTED!</button></a>
+					</form><!-- /form -->
+		        </div><!-- /card-container -->
+			</div>
+		</div> <!-- Home Container -->
+	</div>
+	<!-- body -->
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/typed.min.js"></script>
+	<script type="text/javascript" src="js/validation.js"></script>
+
+	<!-- Main Script -->
+	<script type="text/javascript">
+		var errorBar = $("#error");
+
+		$(document).ready(function() {
+			errorBar.hide();
+
+			$(document).on("click", "#openSignin", function() {
+				logo.hide();
+				maindiv.hide();
+				logindiv.show(500);
+			});
+
+			$(document).on("click", "#back", function() {
+				logo.show();
+				maindiv.show();
+				logindiv.hide();
+				otherdiv.hide();
+			});
+
+			$(document).on("click", "#openOthers", function() {
+				logo.hide();
+				maindiv.hide();
+				otherdiv.show(500);
+			});
+		});
+	</script>
+
+</body>
+
+</html>
