@@ -12,6 +12,7 @@
 
 	<!-- Stylesheets -->
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/global.css" rel="stylesheet" type="text/css" />
 	<link href="css/index-style.css" rel="stylesheet" type="text/css" />
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
@@ -24,8 +25,8 @@
 				<!-- <h1 class="header" style="text-align: center;">Green and White 2018</h1> -->
 				<img src="images/logo.png" class="img-responsive" id="logo" alt="Responsive image" style="width: 350px;">
 				<br><br>
-				<button class="btn btn-small btn-success btn-block submitbtn mainbtn" id="openSignin">LOG IN</button>
-				<button class="btn btn-small btn-default btn-block submitbtn mainbtn" id="openOthers">JOIN X-POST</button>
+				<button class="btn btn-small btn-block submitbtn mainbtn" id="openLogInForm">LOG IN</button>
+				<button class="btn btn-small btn-block submitbtn mainbtn" id="openSignUpForm">JOIN X-POST</button>
 			</div>
 
 			<div id="login-cont">
@@ -43,7 +44,7 @@
 						<p class="input_title">Password</p>
 						<input type="password" id="inputPassword" class="login_box" required>
 						<br>
-						<a href="reserve.html"><button class="btn btn-small btn-success btn-block submitbtn" type="button">LOG IN</button></a>
+						<a href="reserve.html"><button class="btn btn-small btn-block submitbtn" id = "btnLogIn" type="button">LOG IN</button></a>
 					</form><!-- /form -->
 		        </div><!-- /card-container -->
 			</div>
@@ -51,7 +52,7 @@
 			<div id="other-cont">
 				<div class="card card-container">
 					<h2 class='login_title text-center'>
-            <span class="pull-left">SIGN UP</span>
+            <span class="pull-left">SIGN UP </span>
 						<span class="pull-right backbtn" id="back"><< Back</span>
 					</h2>
 					<hr class="top-hr">
@@ -66,10 +67,12 @@
               </div>
             </div>
 
-						<input type="text" id="inputUsername" class="login_box" placeholder="Username" required autofocus><br>
+						<input type="text" id="inputUsername1" class="login_box" placeholder="Username" required autofocus><br>
 						<input type="email" id="inputEmail" class="login_box" placeholder="Email Address" required autofocus><br>
-						<input type="password" id="inputPassword" class="login_box" placeholder="Password" required autofocus><br>
-            <input type="password" id="inputConfirmPassword" class="login_box" placeholder="Confirm Password" required autofocus><br>
+						<input type="password" id="inputPassword1" class="login_box" placeholder="Password" required autofocus><br>
+            <input type="password" id="inputConfirmPassword" class="login_box" placeholder="Confirm Password"
+									 onkeyup = "checkPass(); return false;" required autofocus>
+						<span id="passwordMatch"></span><br>
 
             <div class="row">
               <div class="form-group col-xs-6">
@@ -77,7 +80,7 @@
               </div>
               <div class="form-group col-xs-6">
                 <select id = "inputGender" class="col md-6 login_box" placeholder="Gender"required autofocus>
-                  <option selected disabled >Gender</option>
+                  <option selected disabled>Gender</option>
                   <option value = "M">Male</option>
                   <option value = "F">Female</option>
                 </select>
@@ -89,7 +92,7 @@
               I agree to the Terms & Conditions.
             </label>
 
-            <a href="#"><button class="btn btn-small btn-success btn-block submitbtn" id="reqBtn" type="button">SUBMIT</button></a>
+            <a href="#"><button class="btn btn-small btn-block submitbtn" id="btnSignUp" type="button">SUBMIT</button></a>
 					</form><!-- /form -->
 		        </div><!-- /card-container -->
 			</div>
@@ -102,9 +105,8 @@
 	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/typed.min.js"></script>
+	<!--<script type="text/javascript" src="js/typed.min.js"></script>-->
 	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript" src="js/validation.js"></script>
 </body>
 
 </html>

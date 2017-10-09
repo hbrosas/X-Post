@@ -7,8 +7,8 @@ body, html {
 
 .the-body {
     color: #f2f2f2;
-    /*background: url('../images/home-bg.jpg') no-repeat center center;*/
-    background-size: cover;
+    background: url('../img/background.jpg') no-repeat center;
+    background-size: contain;
 }
 
 .main-container {
@@ -79,20 +79,6 @@ hr {
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-#inputUsername,
-#inputPassword,
-#inputFirstName, #inputLastName,
-#inputEmail, #inputConfirmPassword, #inputBirthday, #inputGender{
-    direction: ltr;
-    height: 30px;
-    font-size: 12px;
-    font-family: 'Lato', sans-serif;
-    padding-left: 10px;
-    width: 100%;
-    display: block;
-    color: #424242;
-}
-
 .form-control:focus {
     border-color: rgb(104, 145, 162);
     outline: 0;
@@ -110,7 +96,8 @@ hr {
 .iagree, .forgot {
     color: #424242;
     font-family: 'Lato', sans-serif;
-    font-weight: 100;
+    font-size: 12px;
+    padding-bottom: 10px;
 }
 
 .forgot {
@@ -139,4 +126,32 @@ hr {
 .error {
     font-family: 'Lato', sans-serif;
     color: #ef5350;
+}
+
+
+#openSignUpForm, #btnSignUp{
+    background-color:darkgrey;
+}
+
+#openLogInForm:hover{
+  color:darkgrey;
+}
+
+#inputUsername,
+#inputPassword,
+#inputUsername1, #inputPassword1,
+#inputFirstName, #inputLastName,
+#inputEmail, #inputConfirmPassword, #inputBirthday, #inputGender{
+    direction: ltr;
+    height: 30px;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    padding-left: 10px;
+    width: 100%;
+    display: block;
+    color: #424242;
+}
+
+#passwordMatch, #signUpTagline{
+  font-size: 10px;
 }
