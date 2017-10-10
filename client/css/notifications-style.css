@@ -1,0 +1,73 @@
+a:hover{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input.btn{
+  width: 50%;
+}
+
+.notiftabs{
+  background-color: white;
+  color:black
+}
+
+.panel-body{
+  min-height: 100px;
+  padding-left:3%;
+  padding-right:3%;
+}
+
+.img-circle{
+  margin-left:15%;
+}
+
+.notificationContent{
+  padding-left:2%;
+  padding:10px; margin-top:10px;
+  padding-right:2%;
+
+}
+.contentHeader{
+    color:#000040;
+}
+
+.contentHeader, .contentMessage{
+  overflow: hidden;
+  text-align: justify;
+}
+
+.contentDate{
+  float:right;
+  font-size: 10px;
+}
+
+.contentMessage{
+  font-size:12px;
+  font-style: italic;
+}
+
+.form-control{
+  font-size:12px;
+}
+
+.modal-footer{
+  padding:5px;
+  text-align: center;
+}
+
+.votesToReveal{
+  font-size: 10px;
+  float:right;
+}
+
+#answerDiv{
+  padding:10px;
+}
+
+#notificationsPanel{
+  margin-top:20px;
+  border: solid 1px #e5e5e5;
+  border-top: none;
+  border-bottom: none;
+}

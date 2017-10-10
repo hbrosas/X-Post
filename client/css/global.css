@@ -6,3 +6,8 @@ body{
   background-color:black;
   color: white;
 }
+
+.btn:hover{
+  color: #36e9b9;
+  text-decoration: none;
+}

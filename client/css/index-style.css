@@ -133,8 +133,8 @@ hr {
     background-color:darkgrey;
 }
 
-#openLogInForm:hover{
-  color:darkgrey;
+#openSignUpForm:hover, #btnSignUp:hover{
+  color:black;
 }
 
 #inputUsername,
@@ -154,4 +154,8 @@ hr {
 
 #passwordMatch, #signUpTagline{
   font-size: 10px;
+}
+
+#btnLogIn, #btnSignUp{
+  width: 100%;
 }
