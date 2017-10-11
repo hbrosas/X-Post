@@ -23,7 +23,11 @@ input.btn{
 }
 
 .img-circle{
-  margin-left:15%;
+  margin-left:3%;
+}
+
+.img-circle-profs{
+  margin-left:3%;
 }
 
 .notificationContent{
@@ -49,6 +53,7 @@ input.btn{
 .contentMessage{
   font-size:12px;
   font-style: italic;
+  color: black;
 }
 
 .form-control{
