@@ -5,3 +5,23 @@ $(".btn-pref .btn").click(function () {
     $(this).removeClass("btn-default").addClass("btn-primary");
 });
 });
+
+var freedomTab = $("#freedomTab");
+var questionTab = $("questionTab");
+
+freedomTab.hide();
+
+
+$(document).ready(function(){
+$("freedomLbl").click(function(){
+  questionTab.hide();
+  freedomTab.show();
+});
+});
+
+$(document).ready(function(){
+$("#questionLbl").click(function(){
+  questionTab.show();
+  freedomTab.hide();
+});
+});
