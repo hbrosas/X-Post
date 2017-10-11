@@ -9,7 +9,6 @@ body, html {
     color: #f2f2f2;
     background-size: contain;
 }
-
 .main-container {
     width: 100%;
     height: 100%;
@@ -113,7 +112,7 @@ hr {
 }
 
 .mainbtn {
-    /*width: 150px;*/
+    width: 310px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -127,9 +126,18 @@ hr {
     color: #ef5350;
 }
 
+#openLogInForm, #btnLogIn {
+	background-color:#424242;
+	color: #fefefe;
+}
+
+#openLogInForm:hover, #btnLogIn:hover {
+	color: #e0e0e0;
+}
 
 #openSignUpForm, #btnSignUp{
-    background-color:darkgrey;
+    background-color:#e0e0e0;
+		color: #424242;
 }
 
 #openSignUpForm:hover, #btnSignUp:hover{
