@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>Dashboard | X-Post</title>
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="img/icons/flaticon.css">
+	<link href="css/global.css" rel="stylesheet" type="text/css" />
+	<link href="css/notifications-style.css" rel="stylesheet" type="text/css" />
+	<link href="css/navbar.css" rel="stylesheet" type="text/css" />
+	<link href="css/dashboard.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:#fefefe">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
+									class="icon-bar"></span><span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#" style="padding-top:12px;">
+						<img alt="X-Post" src="img/logo_nav.png" style="width:120px;" class="img-responsive">
+					</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+							<li class="#"><a href="dashboard.html"><span class="glyphicon glyphicon-home"></span>Dashboard</a></li>
+							<li class="active"><a href="notifications.html"><span class="glyphicon glyphicon-star"></span>Notifications &nbsp;&nbsp;<span class="label label-primary">42</span></a></li>
+							<li class="#" id="searchBtn"><a href="#"><span class="glyphicon glyphicon-search"></span>Search</a></li>
+					</ul>
+
+					<div class="col-sm-3 col-md-3" id="searchBar">
+			        <form class="navbar-form" role="search">
+			        <div class="input-group">
+			            <input type="text" class="form-control" placeholder="Search" name="q">
+			            <div class="input-group-btn">
+			                <button class="btn btn-default" type="submit" style="background-color:#fefefe; color: #424242;"><i class="glyphicon glyphicon-search"></i></button>
+			            </div>
+			        </div>
+			        </form>
+			    </div>
+
+					<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+									class="glyphicon glyphicon-user"></span>Hazel Brosas <b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="profile.html"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
+											<!-- <li><a href="#"><span class="glyphicon glyphicon-cog"></span>Settings</a></li> -->
+											<li class="divider"></li>
+											<li><a href="index.html"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
+									</ul>
+							</li>
+							<li class="#">
+								<button type="button" class="btn btn-info" data-toggle="modal" id="xpost">
+									X - POST
+								</button>
+							</li>
+					</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="col-lg-4">
+			<div class="row col-sm-12" id = "trendingPanel">
+				<div class="col-sm-12">
+					<div class="page-header">
+					  <span class="trendingTitle"><strong>TRENDING</strong></span>
+					</div>
+
+					 <h5 class = "contentHeader">
+						 <b>Anonymous</b> asked <b>Ogie Diaz</b> a question:
+					 </h5>
+						<p class = "contentMessage">
+							 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+							 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								 proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+						 </p>
+						 <span class="contentDate pull-left"> 09-21-2017 </span>
+						 <br>
+						 <a><button class="btn btn-primary pull-right" type="button" style="background-color:#66bb6a;">
+							 Vote to Reveal &nbsp;&nbsp;&nbsp;<span class="badge">4/10</span>
+						 </button></a><br><br>
+
+				 	<hr size="25">
+
+					<h5 class = "contentHeader">
+						<b>Anonymous</b> asked <b>Ogie Diaz</b> a question:
+					</h5>
+					 <p class = "contentMessage">
+							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+						</p>
+						<span class="contentDate pull-left"> 09-21-2017 </span>
+						<br>
+						<a><button class="btn btn-primary pull-right" type="button" style="background-color:#66bb6a;">
+							Vote to Reveal &nbsp;&nbsp;&nbsp;<span class="badge">4/10</span>
+						</button></a><br><br>
+
+				 <hr size="25">
+
+				 <h5 class = "contentHeader">
+					 <b>Anonymous</b> asked <b>Ogie Diaz</b> a question:
+				 </h5>
+					<p class = "contentMessage">
+						 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+						 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							 proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+					 </p>
+					 <span class="contentDate pull-left"> 09-21-2017 </span>
+					 <br>
+					 <a><button class="btn btn-primary pull-right" type="button" style="background-color:#66bb6a;">
+						 Vote to Reveal &nbsp;&nbsp;&nbsp;<span class="badge">4/10</span>
+					 </button></a><br><br>
+
+				<hr size="25">
+
+				<h5 class = "contentHeader">
+					<b>Anonymous</b> asked <b>Ogie Diaz</b> a question:
+				</h5>
+				 <p class = "contentMessage">
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+					</p>
+					<span class="contentDate pull-left"> 09-21-2017 </span>
+					<br>
+					<a><button class="btn btn-primary pull-right" type="button" style="background-color:#66bb6a;">
+						Vote to Reveal &nbsp;&nbsp;&nbsp;<span class="badge">4/10</span>
+					</button></a><br><br>
+
+			 <hr size="25">
+
+			 <h5 class = "contentHeader">
+				 <b>Anonymous</b> asked <b>Ogie Diaz</b> a question:
+			 </h5>
+				<p class = "contentMessage">
+					 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+					 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						 proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+				 </p>
+				 <span class="contentDate pull-left"> 09-21-2017 </span>
+				 <br>
+				 <a><button class="btn btn-primary pull-right" type="button" style="background-color:#66bb6a;">
+					 Vote to Reveal &nbsp;&nbsp;&nbsp;<span class="badge">4/10</span>
+				 </button></a><br><br>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-8">
+			<div class="row col-sm-12" id = "notificationsPanel">
+		 	          <div id="myTabContent" class="tab-content">
+		 	                <div class="tab-pane fade active in" id="notificationTab" role="tabpanel">
+		 										<!-- Notification -->
+		 									  <div class="col-md-12 col-xs-12">
+		 	                          <div class="panel panel-default">
+		 	                             <div class="panel-body">
+		 	                                <div class="row">
+		 	                                    <div class="col-md-2 col-xs-2">
+		 	                                         <img class="img-responsive" src="img/notif_question.png">
+		 	                                     </div>
+		 	                                     <div class="col-md-10 col-xs-10" class = "notificationContent">
+		 	                                        <h5 class = "contentHeader">
+		 																						<b>Anonymous</b> asked <b>Ogie Diaz</b> a question: <span class="contentDate"> 09-21-2017 </span>
+		 																					</h5>
+		 	                                         <p class = "contentMessage">
+		 																					 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+		 																							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		 																							 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		 																							 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		 																							 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		 																							  proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		 																						</p>
+																								<button class="btn btn-primary pull-right" type="button" style="background-color:#66bb6a;">
+																								  Vote to Reveal &nbsp;&nbsp;&nbsp;<span class="badge">4/10</span>
+																								</button>
+		 	                                    </div>
+		 	                                 </div>
+		 	                              </div>
+		 	                            </div>
+		 	                  </div>
+		 										<!-- Message -->
+		 									  <div class="col-md-12 col-xs-12">
+		 	                          <div class="panel panel-default">
+		 	                             <div class="panel-body">
+		 	                                <div class="row">
+		 	                                    <div class="col-md-2 col-xs-2">
+		 	                                         <img class="img-responsive" src="img/notif_message.png">
+		 	                                     </div>
+		 	                                     <div class="col-md-10 col-xs-10" class = "notificationContent">
+		 	                                        <h5 class = "contentHeader">
+		 																						<b>Marlou Arizala</b> messaged <b>Xander Ford</b>. <span class="contentDate"> 09-21-2017 </span>
+		 																					</h5>
+
+		 	                                         <p class = "contentMessage">
+		 																					 		"Hello. I just want to tell you that you are so beautiful.
+		 																							And I have a crush on you since birth"
+		 																					 </p>
+																							 <button class="btn btn-primary pull-right" type="button" style="background-color:#66bb6a;" disabled = "true">
+ 																								Revealed &nbsp;&nbsp;&nbsp;<span class="badge">10/10</span>
+ 																							</button>
+		 	                                    </div>
+		 	                                 </div>
+		 	                              </div>
+		 	                            </div>
+		 	                  </div>
+												<!-- Notification -->
+		 									  <div class="col-md-12 col-xs-12">
+		 	                          <div class="panel panel-default">
+		 	                             <div class="panel-body">
+		 	                                <div class="row">
+		 	                                    <div class="col-md-2 col-xs-2">
+		 	                                         <img class="img-responsive" src="img/notif_question.png">
+		 	                                     </div>
+		 	                                     <div class="col-md-10 col-xs-10" class = "notificationContent">
+		 	                                        <h5 class = "contentHeader">
+		 																						<b>Anonymous</b> asked <b>Ogie Diaz</b> a question: <span class="contentDate"> 09-21-2017 </span>
+		 																					</h5>
+		 	                                         <p class = "contentMessage">
+		 																					 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+		 																							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		 																							 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		 																							 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		 																							 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		 																							  proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		 																						</p>
+																								<button class="btn btn-primary pull-right" type="button" style="background-color:#66bb6a;">
+																								  Vote to Reveal &nbsp;&nbsp;&nbsp;<span class="badge">4/10</span>
+																								</button>
+		 	                                    </div>
+		 	                                 </div>
+		 	                              </div>
+		 	                            </div>
+		 	                  </div>
+		 										<!-- Message -->
+		 									  <div class="col-md-12 col-xs-12">
+		 	                          <div class="panel panel-default">
+		 	                             <div class="panel-body">
+		 	                                <div class="row">
+		 	                                    <div class="col-md-2 col-xs-2">
+		 	                                         <img class="img-responsive" src="img/notif_message.png">
+		 	                                     </div>
+		 	                                     <div class="col-md-10 col-xs-10" class = "notificationContent">
+		 	                                        <h5 class = "contentHeader">
+		 																						<b>Marlou Arizala</b> messaged <b>Xander Ford</b>. <span class="contentDate"> 09-21-2017 </span>
+		 																					</h5>
+
+		 	                                         <p class = "contentMessage">
+		 																					 		"Hello. I just want to tell you that you are so beautiful.
+		 																							And I have a crush on you since birth"
+		 																					 </p>
+																							 <button class="btn btn-primary pull-right" type="button" style="background-color:#66bb6a;" disabled = "true">
+ 																								Revealed &nbsp;&nbsp;&nbsp;<span class="badge">10/10</span>
+ 																							</button>
+		 	                                    </div>
+		 	                                 </div>
+		 	                              </div>
+		 	                            </div>
+		 	                  </div>
+												<!-- Notification -->
+		 									  <div class="col-md-12 col-xs-12">
+		 	                          <div class="panel panel-default">
+		 	                             <div class="panel-body">
+		 	                                <div class="row">
+		 	                                    <div class="col-md-2 col-xs-2">
+		 	                                         <img class="img-responsive" src="img/notif_question.png">
+		 	                                     </div>
+		 	                                     <div class="col-md-10 col-xs-10" class = "notificationContent">
+		 	                                        <h5 class = "contentHeader">
+		 																						<b>Anonymous</b> asked <b>Ogie Diaz</b> a question: <span class="contentDate"> 09-21-2017 </span>
+		 																					</h5>
+		 	                                         <p class = "contentMessage">
+		 																					 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+		 																							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		 																							 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		 																							 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		 																							 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		 																							  proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		 																						</p>
+																								<button class="btn btn-primary pull-right" type="button" style="background-color:#66bb6a;">
+																								  Vote to Reveal &nbsp;&nbsp;&nbsp;<span class="badge">4/10</span>
+																								</button>
+		 	                                    </div>
+		 	                                 </div>
+		 	                              </div>
+		 	                            </div>
+		 	                  </div>
+		 										<!-- Message -->
+		 									  <div class="col-md-12 col-xs-12">
+		 	                          <div class="panel panel-default">
+		 	                             <div class="panel-body">
+		 	                                <div class="row">
+		 	                                    <div class="col-md-2 col-xs-2">
+		 	                                         <img class="img-responsive" src="img/notif_message.png">
+		 	                                     </div>
+		 	                                     <div class="col-md-10 col-xs-10" class = "notificationContent">
+		 	                                        <h5 class = "contentHeader">
+		 																						<b>Marlou Arizala</b> messaged <b>Xander Ford</b>. <span class="contentDate"> 09-21-2017 </span>
+		 																					</h5>
+
+		 	                                         <p class = "contentMessage">
+		 																					 		"Hello. I just want to tell you that you are so beautiful.
+		 																							And I have a crush on you since birth"
+		 																					 </p>
+																							 <button class="btn btn-primary pull-right" type="button" style="background-color:#66bb6a;" disabled = "true">
+ 																								Revealed &nbsp;&nbsp;&nbsp;<span class="badge">10/10</span>
+ 																							</button>
+		 	                                    </div>
+		 	                                 </div>
+		 	                              </div>
+		 	                            </div>
+		 	                  </div>
+
+		 			            </div>
+		 	    </div>
+		 	    </div>
+		 	</div>
+		</div>
+	</div>
+
+ </div>
+	<!-- Scripts -->
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/navbar.js"></script>
+</body>
+
+</html>
