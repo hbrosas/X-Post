@@ -1,189 +1,63 @@
-/* USER PROFILE PAGE */
- .card {
-    margin-top: 20px;
-    padding: 30px;
-    background-color: rgba(214, 224, 226, 0.2);
-    -webkit-border-top-left-radius:5px;
-    -moz-border-top-left-radius:5px;
-    border-top-left-radius:5px;
-    -webkit-border-top-right-radius:5px;
-    -moz-border-top-right-radius:5px;
-    border-top-right-radius:5px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+#profilePanel {
+  margin-top: 20px;
 }
 
-body{padding-top:30px;}
-
-.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
-
-small {
-display: block;
-line-height: 1.428571429;
-color: #999;
+/*==============================*/
+/*====== Social Profile css =====*/
+/*==============================*/
+.countlist h3 {
+	margin: 0;
+	font-weight: 400;
+	line-height: 28px;
 }
-.card.hovercard {
-    position: relative;
-    padding-top: 0;
-    overflow: hidden;
-    text-align: center;
-    background-color: #fff;
-    background-color: rgba(255, 255, 255, 1);
+.countlist {
+	text-transform: uppercase
 }
-.card.hovercard .card-background {
-    height: 130px;
+.countlist li {
+	padding: 15px 30px 15px 0;
+	font-size: 14px;
+	text-align: left;
 }
-.card-background img {
-    -webkit-filter: blur(25px);
-    -moz-filter: blur(25px);
-    -o-filter: blur(25px);
-    -ms-filter: blur(25px);
-    filter: blur(25px);
-    margin-left: -100px;
-    margin-top: -200px;
-    min-width: 130%;
+.countlist li small {
+	font-size: 12px;
+	margin: 0
 }
-.card.hovercard .useravatar {
-    position: absolute;
-    top: 15px;
-    left: 0;
-    right: 0;
+.followbtn {
+	float: right;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  margin-right: 5px;
 }
-.card.hovercard .useravatar img {
-    width: 100px;
-    height: 100px;
-    max-width: 100px;
-    max-height: 100px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    border: 5px solid rgba(255, 255, 255, 0.5);
+.userprofile.social {
+	background-color: #ffcdd2;
+	background-size: 100%;
+	padding: 50px 0;
+	margin: 0
 }
-.card.hovercard .card-info {
-    position: absolute;
-    bottom: 14px;
-    left: 0;
-    right: 0;
+.userprofile.social .username {
+	color: #424242;
 }
-.card.hovercard .card-info .card-title {
-    padding:0 5px;
-    font-size: 20px;
-    line-height: 1;
-    color: #262626;
-    background-color: rgba(255, 255, 255, 0.1);
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+.userprofile.social .username+p {
+	color: #424242;
+	opacity: 0.8
 }
-.card.hovercard .card-info {
-    overflow: hidden;
-    font-size: 12px;
-    line-height: 20px;
-    color: #737373;
-    text-overflow: ellipsis;
+.postbtn {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	z-index: 9
 }
-.card.hovercard .bottom {
-    padding: 0 20px;
-    margin-bottom: 17px;
+.status-upload {
+	width: 100%;
+	float: left;
+	margin-bottom: 15px
 }
-.btn-pref .btn {
-    -webkit-border-radius:0 !important;
+.posttimeline .panel {
+	margin-bottom: 15px
 }
-
-.text{
-    font-family: 'Lato', sans-serif;
+.commentsblock {
+	background: #f8f9fb;
 }
-
-/*
-    Image credits:
-    uifaces.com (http://uifaces.com/authorized)
-*/
-
-#login { display: none; }
-.login,
-.logout {
-    position: absolute;
-    top: -3px;
-    right: 0;
+.nopaddingbtm {
+	margin-bottom: 0
 }
-.page-header { position: relative; }
-.reviews {
-    color: #555;
-    font-weight: bold;
-    margin: 10px auto 20px;
-}
-.notes {
-    color: #999;
-    font-size: 12px;
-}
-.media .media-object { max-width: 120px; }
-.media-body { position: relative; }
-.media-date {
-    position: absolute;
-    right: 25px;
-    top: 25px;
-}
-.media-date li { padding: 0; }
-.media-date li:first-child:before { content: ''; }
-.media-date li:before {
-    content: '.';
-    margin-left: -2px;
-    margin-right: 2px;
-}
-.media-comment { margin-bottom: 20px;
-color:black; }
-.media-replied { margin: 0 0 20px 50px; }
-.media-replied .media-heading { padding-left: 6px; }
-
-.btn-circle {
-    font-weight: bold;
-    font-size: 12px;
-    padding: 6px 15px;
-    border-radius: 20px;
-}
-.btn-circle span { padding-right: 6px; }
-.embed-responsive { margin-bottom: 20px; }
-.tab-content {
-    padding: 50px 15px;
-    border: 1px solid #ddd;
-    border-top: 0;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-}
-.custom-input-file {
-    overflow: hidden;
-    position: relative;
-    width: 120px;
-    height: 120px;
-    background: #eee url('https://s3.amazonaws.com/uifaces/faces/twitter/walterstephanie/128.jpg');
-    background-size: 120px;
-    border-radius: 120px;
-}
-input[type="file"]{
-    z-index: 999;
-    line-height: 0;
-    font-size: 0;
-    position: absolute;
-    opacity: 0;
-    filter: alpha(opacity = 0);-ms-filter: "alpha(opacity=0)";
-    margin: 0;
-    padding:0;
-    left:0;
-}
-.uploadPhoto {
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    display: none;
-    width: 50%;
-    height: 50%;
-    color: #fff;
-    text-align: center;
-    line-height: 60px;
-    text-transform: uppercase;
-    background-color: rgba(0,0,0,.3);
-    border-radius: 50px;
-    cursor: pointer;
-}
-.custom-input-file:hover .uploadPhoto { display: block; }
