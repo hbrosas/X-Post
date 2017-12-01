@@ -1,7 +1,7 @@
 var express = require('express');
 var browserSync = require('browser-sync');
 var bodyParser = require("body-parser");
-var router = require("./router.js");
+var router = require("/router.js");
 
 var app = express();
 

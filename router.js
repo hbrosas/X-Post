@@ -1,9 +1,18 @@
 var express = require("express");
 var jwt = require("jsonwebtoken");
 var sessionCtrl = require("./server/controllers/session.server.controller.js");
-var meetingCtrl = require("./server/controllers/meeting.server.controller.js");
+var postctrl = require("./server/controllers/meeting.server.controller.js");
 
 var router = express.Router();
+
+
+//routes
+
+router.get('/users/:id', ctrl.getAll);
+router.get('/posts/:id', ctrl.getById);
+router.get('/posts', ctrl.getAll);
+router.delete('/posts/:id', ctrl.delete);
+router.patch('/posts/:id', ctrl.update);
 
 //authentication middleware
 router.use(function(req, res, next) {
@@ -35,7 +44,7 @@ router.use(function(req, res, next) {
 
         var access = req.decoded.access.split(",");
 
-        if(req.url == "/meeting" && access.includes("meeting_view")) {
+        if(req.url == "/index" && access.includes("dashboard")) {
             next();
         } else {
             return res.status(401).send();
