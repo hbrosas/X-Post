@@ -18,6 +18,7 @@
   "homepage": "https://github.com/hbrosas/X-Post#readme",
   "dependencies": {
     "browser-sync": "^2.18.13",
+    "browsersync": "0.0.1-security",
     "express": "^4.16.1"
   }
 }
