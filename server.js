@@ -1,7 +1,10 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var mongoose = require('mongoose');
 var logger = require('./logger.js');
+
+process.env.SECRET_KEY = "mysecretkey";
 
 function Server(port, router) {
 
@@ -22,6 +25,8 @@ function Server(port, router) {
         app.use('/public', express.static(__dirname + '/public'));
     		app.use('/api', this.router);
 
+				var authenticateController = require('./server/controllers/authenticate.controller');
+				app.get('/api/authenticate', authenticateController.authenticate);
 		// // User profile
 		app.get('/signin', function(req, res){
 			res.sendfile(__dirname + '/client/index.html');
