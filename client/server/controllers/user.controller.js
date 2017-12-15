@@ -23,6 +23,8 @@ exports.create = function(req, res) {
     res.status(204).send();
 }
 
+
+
 //GET /User/:id
 exports.getById = function(req, res, next) {
     return next(new Error('Oops this is an intentional error'));
