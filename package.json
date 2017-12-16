@@ -1,0 +1,28 @@
+{
+  "name": "x-post",
+  "version": "1.0.0",
+  "description": "An anonymous-revealer social networking site",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcrypt": "*",
+    "body-parser": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "^4.13.6",
+    "react": "*",
+    "react-dom": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hbrosas/X-Post.git"
+  },
+  "author": "Brosas, Lim, Sevilla",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hbrosas/X-Post/issues"
+  },
+  "homepage": "https://github.com/hbrosas/X-Post#readme"
+}

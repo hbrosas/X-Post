@@ -1,0 +1,1 @@
+C:\Users\Hazel\Documents\GitHub\X-Post\env\mongodb\bin\mongo.exe --dbpath C:\Users\Hazel\Documents\GitHub\X-Post\env\data\db
