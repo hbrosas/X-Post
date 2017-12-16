@@ -1,0 +1,53 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+const bcrypt = require("bcrypt");
+
+mongoose.Promise = global.Promise;
+
+// Create User Schema & Model
+let UserSchema = new Schema({
+	firstName: { type: String, required: true },
+	lastName: { type: String, required: true },
+	userName: { type: String, required: true },
+	emailAddress: { type: String, required: true },
+	password: { type: String, required: true },
+	birthday: String,
+	gender: String 
+	},{
+		timestamps: true
+	}	
+});
+
+userSchema.pre("save", function(next) {
+    bcrypt
+        .hash(this.password, 10)
+        .then((hash) => {
+            this.password = hash
+            next();
+        });
+});
+
+
+userSchema.statics = {
+    findPasswordHash(name) {
+        userid = name;
+
+        return new Promise((resolve, reject) => {
+            this.findOne({ name: userid }, (err, user) => {
+                if(!err) {
+                    if(user) {
+                        resolve(user.password);
+                    } else {
+                        reject("User not found.");
+                    }
+                } else {
+                    reject(err);
+                }
+            });
+        });
+    }
+}
+
+var User = mongoose.model("User", UserSchema);
+
+module.exports = User;
