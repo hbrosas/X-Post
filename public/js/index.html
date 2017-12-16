@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+	<title>Green and White 2018</title>
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/index-style.css" rel="stylesheet" type="text/css" />
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body class="the-body">
+	<div class="main-container">
+
+		<div id="home-cont" class="home-cont">
+			<div id="main">
+				<!-- <h1 class="header" style="text-align: center;">Green and White 2018</h1> -->
+				<img src="images/logo.png" class="img-responsive" id="logo" alt="Responsive image" style="width: 350px;">
+				<br><br>
+				<button class="btn btn-small btn-success btn-block submitbtn mainbtn" id="openSignin">SIGN IN</button>
+				<button class="btn btn-small btn-default btn-block submitbtn mainbtn" id="openOthers">HAVEN'T SUBSCRIBED YET?</button>
+			</div>
+
+			<div id="login-cont">
+				<div class="card card-container">
+					<h2 class='login_title text-center'>
+						<span class="pull-left">SIGN IN</span>
+						<span class="pull-right backbtn" id="back"><< Back</span>
+					</h2>
+					<hr class="top-hr">
+					<div class="alert alert-danger" id="error" role="alert">Login Error. Invalid Username/Password</div>
+					<form class="form-signin" name="username">
+						<p class="input_title">Username/Email</p>
+						<input type="text" id="inputEmail" class="login_box" onkeyup="validatespecial(this)" placeholder="user@dlsu.edu.ph" required autofocus>
+						<br>
+						<p class="input_title">Password</p>
+						<input type="password" id="inputPassword" class="login_box" placeholder="******" required>
+						<br>
+						<div class="inline-form" name="password">
+							<div class="form-group">
+								<label class="checkbox-inline remember" for="checkRememberMe">
+									<input type="checkbox" id="checkRememberMe" value="remember">
+									Remember Me
+								</label>
+								<a class="pull-right forgot" href="#">Forgot password?</a>
+							</div>
+						</div>
+						<a href="dashboard.html"><button class="btn btn-small btn-success btn-block submitbtn" type="button">SIGN IN</button></a>
+					</form><!-- /form -->
+		        </div><!-- /card-container -->
+			</div>
+
+			<div id="other-cont">
+				<div class="card card-container">
+					<h2 class='login_title text-center'>
+						<span class="pull-right backbtn" id="back"><< Back</span>
+					</h2>
+					<hr class="top-hr">
+					<form class="form-request-acct">
+						<p class="input_title">Email Address</p>
+						<input type="email" id="inputEmail" class="login_box" placeholder="user@dlsu.edu.ph" required autofocus><br>
+						<div class="alert alert-danger" id="emailerror" role="alert">Email Address already taken</div>
+						<a href="edit_profile.html"><button class="btn btn-small btn-success btn-block submitbtn" id="reqBtn" type="button">REQUEST AN ACCOUNT</button></a>
+					</form><!-- /form -->
+		        </div><!-- /card-container -->
+			</div>
+
+		</div> <!-- Home Container -->
+	</div>
+	<!-- body -->
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/typed.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/validation.js"></script>
+</body>
+
+</html>

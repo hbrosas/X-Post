@@ -1,0 +1,83 @@
+@media (min-width: 768px) and (max-width: 1199px) {
+  #smallSize {
+    display: block;
+  }
+
+  #mediumSize {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  #smallSize {
+    display: none;
+  }
+
+  #mediumSize {
+    display: block;
+  }
+}
+
+#profilePanel {
+  margin-top: 20px;
+}
+
+/*==============================*/
+/*====== Social Profile css =====*/
+/*==============================*/
+.countlist h3 {
+	margin: 0;
+	font-weight: 400;
+	line-height: 28px;
+}
+.countlist {
+	text-transform: uppercase
+}
+.countlist li {
+	padding: 15px 30px 15px 0;
+	font-size: 14px;
+	text-align: left;
+}
+.countlist li small {
+	font-size: 12px;
+	margin: 0
+}
+.followbtn {
+	float: right;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  margin-right: 5px;
+}
+.userprofile.social {
+	background-color: #ffcdd2;
+	background-size: 100%;
+	padding: 50px 0;
+	margin: 0
+}
+.userprofile.social .username {
+	color: #424242;
+}
+.userprofile.social .username+p {
+	color: #424242;
+	opacity: 0.8
+}
+.postbtn {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	z-index: 9
+}
+.status-upload {
+	width: 100%;
+	float: left;
+	margin-bottom: 15px
+}
+.posttimeline .panel {
+	margin-bottom: 15px
+}
+.commentsblock {
+	background: #f8f9fb;
+}
+.nopaddingbtm {
+	margin-bottom: 0
+}

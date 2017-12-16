@@ -1,0 +1,13 @@
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+.btn{
+  background-color:black;
+  color: white;
+}
+
+.btn:hover{
+  color: #36e9b9;
+  text-decoration: none;
+}

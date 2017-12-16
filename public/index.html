@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>X-POST</title>
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/global.css" rel="stylesheet" type="text/css" />
+	<link href="css/index-style.css" rel="stylesheet" type="text/css" />
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body class="the-body">
+	<div class="main-container">
+
+		<div id="home-cont" class="home-cont">
+			<img src="img/logo_white.png" class="img-responsive" id="logo" alt="Responsive image" style="width: 175px;">
+			<br><br>
+			<div id="main">
+				<button class="btn btn-small btn-block submitbtn mainbtn" id="openLogInForm">Log In</button>
+				<button class="btn btn-small btn-block submitbtn mainbtn" id="openSignUpForm">Create an Account</button>
+			</div>
+
+			<div id="login-cont">
+				<div class="card card-container">
+					<h2 class='login_title text-center'>
+						<span class="pull-left">LOG IN</span>
+						<span class="pull-right backbtn" id="back"><< Back</span>
+					</h2>
+					<hr class="top-hr">
+					<div class="alert alert-danger" id="error" role="alert">Login Error. Invalid Username/Password</div>
+					<form class="form-signin" name="username">
+						<p class="input_title">Username</p>
+						<input type="text" id="inputUsername" class="login_box" onkeyup="validatespecial(this)" required autofocus>
+						<br>
+						<p class="input_title">Password</p>
+						<input type="password" id="inputPassword" class="login_box" required>
+						<br>
+						<a href="dashboard.html"><button class="btn btn-small submitbtn" id = "btnLogIn" type="button">LOG IN</button></a>
+					</form><!-- /form -->
+		        </div><!-- /card-container -->
+			</div>
+
+			<div id="other-cont">
+				<div class="card card-container">
+					<h2 class='login_title text-center'>
+            <span class="pull-left">SIGN UP </span>
+						<span class="pull-right backbtn" id="back"><< Back</span>
+					</h2>
+					<hr class="top-hr">
+					<form class="form-request-acct">
+
+            <div class = "row">
+              <div class="form-group col-xs-6">
+                <input type="text" id="inputFirstName" class="col md-6 login_box" placeholder="First Name" required autofocus>
+              </div>
+              <div class="form-group col-xs-6">
+                <input type="text" id="inputLastName" class="col md-6 login_box" placeholder="Last Name" required autofocus>
+              </div>
+            </div>
+
+						<input type="text" id="inputUsername1" class="login_box" placeholder="Username" required autofocus><br>
+						<input type="email" id="inputEmail" class="login_box" placeholder="Email Address" required autofocus><br>
+						<input type="password" id="inputPassword1" class="login_box" placeholder="Password" required autofocus><br>
+            <input type="password" id="inputConfirmPassword" class="login_box" placeholder="Confirm Password"
+									 onkeyup = "checkPass(); return false;" required autofocus>
+						<span id="passwordMatch"></span><br>
+
+            <div class="row">
+              <div class="form-group col-xs-6">
+                <input type="date" id="inputBirthday" class="col md-6 login_box" placeholder="Birthday" required autofocus>
+              </div>
+              <div class="form-group col-xs-6">
+                <select id = "inputGender" class="col md-6 login_box" placeholder="Gender"required autofocus>
+                  <option selected disabled>Gender</option>
+                  <option value = "M">Male</option>
+                  <option value = "F">Female</option>
+                </select>
+              </div>
+            </div>
+
+            <label class="checkbox-inline iagree" for="checkIAgree">
+              <input type="checkbox" id="checkIAgree" value="iagree">
+              I agree to the Terms & Conditions.
+            </label>
+
+            <a href="#"><button class="btn btn-small submitbtn" id="btnSignUp" type="button">SUBMIT</button></a>
+					</form><!-- /form -->
+		        </div><!-- /card-container -->
+			</div>
+
+		</div> <!-- Home Container -->
+	</div>
+	<!-- body -->
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!--<script type="text/javascript" src="js/typed.min.js"></script>-->
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
