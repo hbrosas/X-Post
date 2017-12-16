@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var routes = require('./routes/app');
 
 var app = express();
+
 // Connect to Mongoose
 mongoose.connect('mondodb://localhost/xpost');
 var db = mongoose.connection;

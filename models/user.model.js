@@ -6,16 +6,16 @@ mongoose.Promise = global.Promise;
 
 // Create User Schema & Model
 let UserSchema = new Schema({
-	firstName: { type: String, required: true },
-	lastName: { type: String, required: true },
-	userName: { type: String, required: true },
-	emailAddress: { type: String, required: true },
-	password: { type: String, required: true },
+	firstName: { type: String, required: [true, 'First Name is Required'] },
+	lastName: { type: String, required: [true, 'Last Name is Required'] },
+	userName: { type: String, required: [true, 'Username is Required'] },
+	emailAddress: { type: String, required: [true, 'Email Address Required'] },
+	password: { type: String, required: [true, 'Password Required'] },
 	birthday: String,
-	gender: String 
+	gender: String
 	},{
 		timestamps: true
-	}	
+	}
 });
 
 userSchema.pre("save", function(next) {
@@ -26,7 +26,6 @@ userSchema.pre("save", function(next) {
             next();
         });
 });
-
 
 userSchema.statics = {
     findPasswordHash(name) {
@@ -49,5 +48,4 @@ userSchema.statics = {
 }
 
 var User = mongoose.model("User", UserSchema);
-
 module.exports = User;
