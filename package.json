@@ -7,14 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "authorization": "^1.0.9",
     "bcrypt": "*",
     "body-parser": "*",
     "express": "*",
     "jsonwebtoken": "*",
     "mongoose": "^4.13.6",
+    "nodemon": "*",
     "react": "*",
-    "react-dom": "*",
-    "nodemon": "*"
+    "react-dom": "*"
   },
   "repository": {
     "type": "git",
