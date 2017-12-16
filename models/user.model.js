@@ -12,13 +12,11 @@ let UserSchema = new Schema({
 	emailAddress: { type: String, required: [true, 'Email Address Required'] },
 	password: { type: String, required: [true, 'Password Required'] },
 	birthday: String,
-	gender: String
-	},{
-		timestamps: true
-	}
+	gender: String,
+	createdOn: { type: Date, default: Date.now }
 });
 
-userSchema.pre("save", function(next) {
+UserSchema.pre("save", function(next) {
     bcrypt
         .hash(this.password, 10)
         .then((hash) => {
@@ -27,7 +25,7 @@ userSchema.pre("save", function(next) {
         });
 });
 
-userSchema.statics = {
+UserSchema.statics = {
     findPasswordHash(name) {
         userid = name;
 

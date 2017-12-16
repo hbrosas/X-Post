@@ -8,5 +8,4 @@ var FollowSchema = new Schema ({
 
 
 var Follow = mongoose.model("Follow", FollowSchema);
-
 module.exports = Follow;

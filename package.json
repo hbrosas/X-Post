@@ -11,7 +11,7 @@
     "bcrypt": "*",
     "body-parser": "*",
     "express": "*",
-    "jsonwebtoken": "*",
+    "jsonwebtoken": "^8.1.0",
     "mongoose": "^4.13.6",
     "nodemon": "*",
     "react": "*",
