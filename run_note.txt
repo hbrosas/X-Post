@@ -1,1 +1,13 @@
-C:\Users\Hazel\Documents\GitHub\X-Post\env\mongodb\bin\mongo.exe --dbpath C:\Users\Hazel\Documents\GitHub\X-Post\env\data\db
+HOW TO RUN THE APP:
+1. Run MongoDB, make DBPath to env/data/db
+-> run CMD Admin
+-> Locate to C:\Program Files\MongoDB\Server\3.6\bin\
+-> mongod.exe --dbpath C:\Users\Hazel\Documents\GitHub\X-Post\env\data\db
+-> run another CMD Admin
+->  Locate to C:\Program Files\MongoDB\Server\3.6\bin\
+-> mongo.exe
+2. Run App (choose ways to run)
+-> Locate to project path
+-> node app
+----- OR ------
+-> nodemon [ NOT WORKING AS OF NOW ]
