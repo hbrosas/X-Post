@@ -2,6 +2,11 @@
 	background-color: #fefefe;
 }
 
+.btnPost {
+	background-color: #90AF78;
+	margin-right: 5px;
+}
+
 #brandImg {
 	padding-top:12px;
 }

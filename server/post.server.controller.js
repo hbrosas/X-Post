@@ -2,8 +2,8 @@ const Post = require("../models/post.model.js");
 
 exports.getAll = function(req, res) {
     Post.findAll()
-        .then((Posts) => {
-            return res.status(200).json(Posts);
+        .then((posts) => {
+            return res.status(200).send(posts);
         })
         .catch((error) => {
             console.log(error);
@@ -12,7 +12,7 @@ exports.getAll = function(req, res) {
 }
 
 exports.getById = function(req, res) {
-    Post.findById(req.params.PostId, function(err, Post) {
+    Post.findById(req.params.postId, function(err, postId) {
         if(err) {
             console.log(err);
             return res.status(500).send();
@@ -36,8 +36,8 @@ exports.create = function(req, res) {
 }
 
 exports.delete = function(req, res) {
-    console.log(req.params.PostId);
-    Post.findByIdAndRemove(req.params.PostId, function(err, data) {
+    console.log(req.params.postId);
+    Post.findByIdAndRemove(req.params.postId, function(err, data) {
         if(!err) {
             res.status(204).send();
         } else {
@@ -47,14 +47,12 @@ exports.delete = function(req, res) {
 }
 
 exports.update = function(req, res) {
-    console.log(req.params.PostId);
-    let Post = {
-        yesterday: req.body.yesterday,
-        today: req.body.today,
-        impediment: req.body.impediment
+    console.log(req.params.postId);
+    let post = {
+        postContent: req.body.postContent
     }
 
-    Post.findByIdAndUpdate(req.params.PostId, Post, function(err, data) {
+    Post.findByIdAndUpdate(req.params.postId, post, function(err, data) {
         if(!err) {
             res.status(204).send();
         } else {
