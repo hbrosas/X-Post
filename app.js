@@ -10,20 +10,16 @@ app.use(bodyParser.json());
 app.use(express.static("./public"));
 app.use('/', require('./routes/app'));
 
-// Connect to Mongoose
-// mongoose.connect('mongodb://127.0.0.1/xpost');
-// var db = mongoose.connection;
-
 app.use("*", function(req, res) {
     res.send("Resource not found (404).");
 });
 
-//db init
+// Connect to Mongoose
 mongoose.connect("mongodb://localhost/xpost", {
     useMongoClient: true
 });
 
-mongoose.promise = Promise;
+mongoose.Promise = global.Promise;
 
 app.listen(3000);
 console.log('Running on port 3000');

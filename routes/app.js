@@ -7,7 +7,11 @@ let router = express.Router();
 
 // Index
 router.get('/', function(req, res) {
-	res.send('Hello Worlddddasd!');
+	res.redirect('index.html');
+});
+// Dashboard
+router.get('/dashboard', function(req, res) {
+	res.redirect('dashboard.html');
 });
 
 // Session
