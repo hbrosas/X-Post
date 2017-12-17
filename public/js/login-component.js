@@ -1,60 +1,56 @@
-class LoginBox extends React.Component {
-
-    constructor() {
+// Create Login Component
+class LoginComponent extends React.Component {
+	constructor() {
         super();
-
         this.state ={
             message: "",
             redirect: false
         }
     }
-    
-    render() {
 
-        if(this.state.redirect) {
-            return (
-                <Redirect to="/" />
-            );
-        }
+	render() {
+			if(this.state.redirect) {
+				window.location.href="/dashboard";
+	        // return (
+	        //     <Redirect to="/dashboard" />
+	        // );
+	    }
+			return (
+				<div className="card card-container">
+					<h2 className='login_title text-center'>
+						<span className="pull-left">LOG IN</span>
+						<span className="pull-right backbtn" id="back">Back</span>
+					</h2>
+					<hr className="top-hr"></hr>
+					<form onSubmit={this._handleSubmit.bind(this)}>
+						<p className="input_title">Username</p>
+						<input type="text" id="inputUsername" className="login_box" required
+							ref="username"/>
+						<br></br>
+						<p className="input_title">Password</p>
+						<input type="password" id="inputPassword" className="login_box" required
+							ref="password"/>
+						<br></br>
+						<div className="errorLoginMsg invisible" id="error" role="alert">Login Error. Invalid Username/Password</div>
+						<br></br>
+						<button className="btn btn-small submitbtn" id = "btnLogIn" type="submit">LOG IN</button>
+					</form>
+				</div>
+			);
+	}
 
-        return (
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col-sm"></div>
-                <div className="col-sm" id="col-sm-login">
-            <div className="alert-login alert alert-danger invisible" role="alert">
-                {this.state.message}
-            </div>
-                    <form onSubmit={this._handleSubmit.bind(this)}>
-                        <div className="form-group">
-                            <label htmlFor="name">User ID</label>
-                            <input type="text" ref={(input) => this._name = input} className="form-control" id="name" placeholder="Enter user ID" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="password">Password</label>
-                            <input type="password" ref={(input) => this._password = input} className="form-control" id="password" placeholder="Password" />
-                        </div>
-                        <button type="submit" className="btn btn-primary">Submit</button>
-            </form>
-                </div>
-                <div className="col-sm"></div>
-            </div>
-        </div>
-
-        );
-    }
-
-    _handleSubmit(e) {
+	_handleSubmit(e) {
         e.preventDefault();
-
+				var username = this.refs.username.value;
+				var password = this.refs.password.value;
         let session = {
-            name: this._name.value,
-            password: this._password.value
+            username: this.refs.username.value,
+            password: this.refs.password.value
         }
-
+				console.log("Username: " + username + " Password: " + password);
         $.ajax({
             type: "POST",
-            url: "/api/session",
+            url: "/session",
             data: session
         }).done((res, status, xhr) => {
             sessionStorage.setItem("token", xhr.getResponseHeader("Authorization"));
@@ -71,10 +67,11 @@ class LoginBox extends React.Component {
             message: error
         });
 
-        let loginAlert = $(".alert-login");
-        
+        let loginAlert = $("#error");
         if(loginAlert.hasClass("invisible")) {
             loginAlert.removeClass("invisible");
         }
     }
 }
+
+ReactDOM.render(<LoginComponent />, document.getElementById("login-cont"));

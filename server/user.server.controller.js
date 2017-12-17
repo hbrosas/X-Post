@@ -1,12 +1,7 @@
 const User = require("../models/user.model.js");
 
 exports.register = (req, res) => {
-    let user = req.body;
-
-    let entry = new User({
-        name: user.name,
-        password: user.password
-    });
+    let entry = new User(req.body);
 
     entry.save((error, data) => {
         if(error) {

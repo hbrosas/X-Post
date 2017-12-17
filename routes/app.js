@@ -1,6 +1,6 @@
 let express = require("express");
-// let auth = require("./auth.js");
-// let sessionCtrl = require("./server/controllers/session.server.controller.js");
+let auth = require("../auth.js");
+let sessionCtrl = require("../server/session.server.controller.js");
 let postCtrl = require("../server/post.server.controller.js");
 let userCtrl = require("../server/user.server.controller.js");
 let router = express.Router();
@@ -9,14 +9,15 @@ let router = express.Router();
 router.get('/', function(req, res) {
 	res.redirect('index.html');
 });
+
 // Dashboard
 router.get('/dashboard', function(req, res) {
 	res.redirect('dashboard.html');
 });
 
 // Session
-// router.post("/session", sessionCtrl.create);
-// router.post("/account/register", accountCtrl.register);
+router.post("/session", sessionCtrl.create);
+router.post("/account/register", userCtrl.register);
 
 // Posts
 // router.get("/post", auth.check, postCtrl.getAll);

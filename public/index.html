@@ -49,71 +49,9 @@
 			</div>
 
 			<div id="login-cont">
-				<div class="card card-container">
-					<h2 class='login_title text-center'>
-						<span class="pull-left">LOG IN</span>
-						<span class="pull-right backbtn" id="back"><< Back</span>
-					</h2>
-					<hr class="top-hr">
-					<div class="alert alert-danger" id="error" role="alert">Login Error. Invalid Username/Password</div>
-					<form class="form-signin" name="username">
-						<p class="input_title">Username</p>
-						<input type="text" id="inputUsername" class="login_box" onkeyup="validatespecial(this)" required autofocus>
-						<br>
-						<p class="input_title">Password</p>
-						<input type="password" id="inputPassword" class="login_box" required>
-						<br>
-						<a href="dashboard.html"><button class="btn btn-small submitbtn" id = "btnLogIn" type="button">LOG IN</button></a>
-					</form><!-- /form -->
-		        </div><!-- /card-container -->
 			</div>
 
 			<div id="other-cont">
-				<div class="card card-container">
-					<h2 class='login_title text-center'>
-            <span class="pull-left">SIGN UP </span>
-						<span class="pull-right backbtn" id="back"><< Back</span>
-					</h2>
-					<hr class="top-hr">
-					<form class="form-request-acct">
-
-            <div class = "row">
-              <div class="form-group col-xs-6">
-                <input type="text" id="inputFirstName" class="col md-6 login_box" placeholder="First Name" required autofocus>
-              </div>
-              <div class="form-group col-xs-6">
-                <input type="text" id="inputLastName" class="col md-6 login_box" placeholder="Last Name" required autofocus>
-              </div>
-            </div>
-
-						<input type="text" id="inputUsername1" class="login_box" placeholder="Username" required autofocus><br>
-						<input type="email" id="inputEmail" class="login_box" placeholder="Email Address" required autofocus><br>
-						<input type="password" id="inputPassword1" class="login_box" placeholder="Password" required autofocus><br>
-            <input type="password" id="inputConfirmPassword" class="login_box" placeholder="Confirm Password"
-									 onkeyup = "checkPass(); return false;" required autofocus>
-						<span id="passwordMatch"></span><br>
-
-            <div class="row">
-              <div class="form-group col-xs-6">
-                <input type="date" id="inputBirthday" class="col md-6 login_box" placeholder="Birthday" required autofocus>
-              </div>
-              <div class="form-group col-xs-6">
-                <select id = "inputGender" class="col md-6 login_box" placeholder="Gender"required autofocus>
-                  <option selected disabled>Gender</option>
-                  <option value = "M">Male</option>
-                  <option value = "F">Female</option>
-                </select>
-              </div>
-            </div>
-
-            <label class="checkbox-inline iagree" for="checkIAgree">
-              <input type="checkbox" id="checkIAgree" value="iagree">
-              I agree to the Terms & Conditions.
-            </label>
-
-            <a href="#"><button class="btn btn-small submitbtn" id="btnSignUp" type="button">SUBMIT</button></a>
-					</form><!-- /form -->
-		        </div><!-- /card-container -->
 			</div>
 
 		</div> <!-- Home Container -->
@@ -121,10 +59,17 @@
 	<!-- body -->
 
 	<!-- Scripts -->
+	<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+	<script src="https://unpkg.com/react-router/umd/react-router.min.js"></script>
+	<script src="https://unpkg.com/react-router-dom/umd/react-router-dom.min.js"></script>
 	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<!--<script type="text/javascript" src="js/typed.min.js"></script>-->
+	<script type="text/babel" src="js/login-component.js" ></script>
+	<script type="text/babel" src="js/register-component.js" ></script>
 	<script type="text/javascript" src="js/index.js"></script>
 </body>
 

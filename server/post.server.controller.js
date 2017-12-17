@@ -1,7 +1,6 @@
 const Post = require("../models/post.model.js");
 
 exports.getAll = function(req, res) {
-
     Post.findAll()
         .then((Posts) => {
             return res.status(200).json(Posts);
@@ -13,7 +12,6 @@ exports.getAll = function(req, res) {
 }
 
 exports.getById = function(req, res) {
-
     Post.findById(req.params.PostId, function(err, Post) {
         if(err) {
             console.log(err);
@@ -39,7 +37,6 @@ exports.create = function(req, res) {
 
 exports.delete = function(req, res) {
     console.log(req.params.PostId);
-
     Post.findByIdAndRemove(req.params.PostId, function(err, data) {
         if(!err) {
             res.status(204).send();

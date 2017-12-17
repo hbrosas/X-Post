@@ -128,6 +128,12 @@ hr {
     color: #ef5350;
 }
 
+.errorLoginMsg {
+	font-family: 'Lato', sans-serif;
+	color: #ef5350;
+	text-align: center;
+}
+
 #openLogInForm, #btnLogIn {
 	background-color:#424242;
 	color: #fefefe;
