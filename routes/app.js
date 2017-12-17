@@ -27,7 +27,7 @@ router.get('/dashboard', function(req, res) {
 
 router.get("/post", postCtrl.getAll);
 router.get("/post/:postId",  postCtrl.getById);
-router.post("/post", postCtrl.create);
+router.post("/post/create", postCtrl.create);
 router.put("/post/:postId", postCtrl.update);
 router.delete("/post/:postId", postCtrl.delete);
 

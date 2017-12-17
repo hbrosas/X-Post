@@ -19,7 +19,7 @@ mongoose.connect("mongodb://localhost/xpost", {
     useMongoClient: true
 });
 
-mongoose.Promise = global.Promise;
+mongoose.promise = Promise;
 
 app.listen(3000);
 console.log('Running on port 3000');

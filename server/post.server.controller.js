@@ -25,9 +25,9 @@ exports.getById = function(req, res) {
 }
 
 exports.create = function(req, res) {
-    let Post = new Post(req.body);
-
-    Post.save((err, Post) => {
+    let post = new Post(req.body);
+		console.log("POST" + req.body.postContent);
+    post.save((err, post) => {
         if(err) {
             console.log(err);
             return res.status(500).send();
